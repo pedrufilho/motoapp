@@ -1,0 +1,60 @@
+<ion-header no-border>
+  <ion-toolbar color="primary">
+    <ion-button slot="start" (click)="irparaLogin()">
+      <ion-icon name="arrow-dropleft"></ion-icon>
+    </ion-button>
+    <ion-title>Chat motoAjato.</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-card>
+    <ion-item>
+      <ion-icon name="contact" slot="start"></ion-icon>
+      <ion-card-content>
+        olá, boa noite! O que vc deseja? E pra onde é a entrega ?
+      </ion-card-content>
+      <ion-button slot="end">View</ion-button>
+    </ion-item>
+    <ion-item>
+      <ion-icon name="contacts" slot="start"></ion-icon>
+      <ion-card-content>
+        olá, boa noite! Uma pizza. Para o IFPI.
+      </ion-card-content>
+      <ion-button fill="outline" slot="end">View</ion-button>
+    </ion-item>
+    <ion-item>
+      <ion-icon name="contact" slot="start"></ion-icon>
+      <ion-card-content>
+        Entregar pra quem?
+      </ion-card-content>
+      <ion-button slot="end">View</ion-button>
+    </ion-item>
+    <ion-item>
+      <ion-icon name="contacts" slot="start"></ion-icon>
+      <ion-card-content>
+        Pra jamile da pegação ou pra fafah top.
+      </ion-card-content>
+      <ion-button fill="outline" slot="end">View</ion-button>
+    </ion-item>
+  </ion-card>
+</ion-content>
+<ion-footer no-border>
+  <ion-toolbar>
+    <ion-item>
+      <ion-buttons>
+        <ion-button (click)="enviarMensagem(campoTexto)" item-start>
+          <ion-icon slot="icon-only" name="happy"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+      <ion-input placeholder="Digite aqui ..." #campoTexto></ion-input>
+      <ion-buttons>
+        <ion-button (click)="enviarMensagem(campoTexto)" item-end>
+          <ion-icon slot="icon-only" name="attach"></ion-icon>
+        </ion-button>
+        <ion-button (click)="enviarMensagem(campoTexto)" item-end>
+          <ion-icon slot="icon-only" name="camera"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+    </ion-item>
+  </ion-toolbar>
+</ion-footer>

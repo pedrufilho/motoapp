@@ -1,0 +1,42 @@
+<ion-header no-border>
+  <ion-toolbar color="primary">
+    <ion-button slot="start" (click)="irparaLogin()">
+      <ion-icon name="arrow-dropleft"></ion-icon>
+    </ion-button>
+    <ion-title>Cadastro</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <div *ngIf="deveExibirCadastroCliente()">
+      
+    <h5>Cadastro Cliente</h5>
+    <ion-input placeholder="nome">Nome:</ion-input>
+    <ion-input placeholder="email">Email:</ion-input>
+    <ion-input placeholder="Crie uma senha">Crie uma senha:</ion-input>
+    <ion-input placeholder="Confirme a senha">Confirme a senha:</ion-input>
+    <ion-button expand="block" size="small">Cadastrar</ion-button>
+  </div>
+
+  <div *ngIf="deveExibirCadastroMotorista()" class="divs">
+    <h5>Cadastro MotoAjato</h5>
+    <ion-input placeholder="nome" show-hide-input>Nome:</ion-input>
+    <ion-input placeholder="email">Email:</ion-input>
+    <ion-input placeholder="Seu cpf">Seu cpf</ion-input>
+    <ion-input placeholder="rie uma senha">Crie uma senha:</ion-input>
+    <ion-input placeholder="confirme a senha">Confirme a senha:</ion-input>
+    <div>
+      <ion-icon name="camera"> </ion-icon>
+    </div>
+    <ion-button expand="block" size="small">Próximo</ion-button>
+  </div>
+
+  <ion-fab vertical="bottom">
+      <ion-segment (ionChange)="segmentChanged($event)" [value]="paginaAtiva">
+        <ion-segment-button value="cliente" checked>Cliente</ion-segment-button>
+  
+        <ion-segment-button value="motorista">Motorista</ion-segment-button>
+      </ion-segment>
+    </ion-fab>
+</ion-content>

@@ -1,0 +1,24 @@
+<ion-header no-border>
+  <ion-toolbar color="primary">
+    <ion-button slot="start" (click)="irparaLogin()">
+      <ion-icon name="arrow-dropleft"></ion-icon>
+    </ion-button>
+    <ion-title class="titulo"> Origem e destino </ion-title>
+    <ion-icon name="search" slot="end"></ion-icon>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-item color="primary">
+    <ion-title>Buscar em:</ion-title>
+  </ion-item>
+  <ion-input placeholder="Logradouro"></ion-input>
+  <ion-input placeholder="Complemento"></ion-input>
+  <ion-input placeholder="O que fazer? E com quem falar?"></ion-input>
+  <ion-item color="primary">
+    <ion-title>Entregar em:</ion-title>
+  </ion-item>
+  <ion-input placeholder="Logradouro"></ion-input>
+  <ion-input placeholder="Complemento"></ion-input>
+  <ion-input placeholder="O que fazer? E com quem falar?"></ion-input>
+  <ion-button color="primary" expand="full" shape="round" (click)="irparaRecebimento()">Retorno</ion-button>
+</ion-content>
